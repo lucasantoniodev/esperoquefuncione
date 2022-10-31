@@ -7,7 +7,7 @@ export const getAllPostsService = () => {
     ["posts"],
     async () => {
       const response = await axios.get(
-        `${import.meta.env.VITE_BASE_URL}/posts`
+        `http://localhost:3000/posts`
       );
 
       return response.data as Promise<PostDTO[]>;
