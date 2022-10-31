@@ -7,7 +7,9 @@ export const getAllPostsService = () => {
     ["posts"],
     async () => {
       const response = await axios.get(
-        `https://lucasantoniodev.000webhostapp.com/teste.json`
+        `https://lucasantoniodev.000webhostapp.com/teste.json`, {
+        headers: {"Access-Control-Allow-Origin": "*"}
+      }
       );
 
       return response.data as Promise<PostDTO[]>;
