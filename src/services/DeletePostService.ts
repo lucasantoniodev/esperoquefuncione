@@ -6,7 +6,7 @@ import { handleInvalidateQuery } from "../QueryProvider/invalidateQuery";
 export const deletePostService = (id: string | undefined) => {
   const { data, mutateAsync, isLoading } = useMutation(async () => {
     const response = await axios.delete(
-      `${import.meta.env.VITE_BASE_URL}/post/${id}`
+      `http://localhost:3000/post/${id}`
     );
 
     if (response.data) {
