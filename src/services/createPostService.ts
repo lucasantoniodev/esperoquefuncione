@@ -8,7 +8,7 @@ export const createPostService = () => {
   const { data, mutateAsync, isLoading } = useMutation(
     async (post: PostDTO) => {
       const response = await axios.post(
-        `${import.meta.env.VITE_BASE_URL}/posts`,
+        `http://localhost:3000/posts`,
         post
       );
 
