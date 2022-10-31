@@ -5,7 +5,7 @@ import axios from "axios";
 export const getPostService = (id: string) => {
   const { data, isLoading } = useQuery(["post"], async () => {
     const response = await axios.get(
-      `${import.meta.env.VITE_BASE_URL}/post/${id}`
+      `http://localhost:3000/post/${id}`
     );
 
     return response.data as Promise<PostDTO>;
