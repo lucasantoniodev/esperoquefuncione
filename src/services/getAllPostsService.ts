@@ -7,7 +7,7 @@ export const getAllPostsService = () => {
     ["posts"],
     async () => {
       const response = await axios.get(
-        `http://localhost:3000/posts`
+        `https://lucasantoniodev.000webhostapp.com/teste.json`
       );
 
       return response.data as Promise<PostDTO[]>;
